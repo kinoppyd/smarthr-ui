@@ -12,12 +12,23 @@ export { Modal, ModalWrapper, ModalTrigger, ModalEraser, ModalContent } from './
 export { Pagination } from './components/Pagination'
 export { Radio } from './components/Radio'
 export { RadioLabel } from './components/RadioLabel'
-export { Button, ButtonAnchor, ButtonDiv } from './components/Button'
+export {
+  PrimaryButton,
+  PrimaryButtonAnchor,
+  SecondaryButton,
+  SecondaryButtonAnchor,
+  DangerButton,
+  DangerButtonAnchor,
+  SkeletonButton,
+  SkeletonButtonAnchor,
+} from './components/Button'
 export { Tag } from './components/Tag'
 export { Base } from './components/Base'
 export { Icon } from './components/Icon'
 export { Table, Head, Row, Cell, Body } from './components/Table'
 export { AppNavi } from './components/AppNavi'
+export { Heading } from './components/Heading'
+export { HeadlineArea } from './components/HeadlineArea'
 
 // themes
 export { createTheme } from './themes/createTheme'
