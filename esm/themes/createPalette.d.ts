@@ -12,6 +12,7 @@ export interface PaletteProperty {
 }
 export interface CreatedPaletteTheme {
     hoverColor: (value: string) => string;
+    disableColor: (value: string) => string;
     TEXT_BLACK: string;
     TEXT_GREY: string;
     BORDER: string;

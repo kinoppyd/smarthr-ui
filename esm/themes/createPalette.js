@@ -10,10 +10,12 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { merge } from '../libs/lodash';
-import { darken } from 'polished';
+import { darken, rgba } from 'polished';
 var hoverColor = function (value) { return darken(0.05, value); };
+var disableColor = function (value) { return rgba(value, 0.5); };
 export var defaultPalette = {
     hoverColor: hoverColor,
+    disableColor: disableColor,
     TEXT_BLACK: '#333',
     TEXT_GREY: '#767676',
     BORDER: '#d6d6d6',
