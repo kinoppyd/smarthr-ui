@@ -31,7 +31,7 @@ export var createFrame = function (userFrame, userPalette) {
     if (userPalette === void 0) { userPalette = {}; }
     var color = userPalette.BORDER || defaultPalette.BORDER;
     var created = merge({
-        border: __assign({}, defaultFrame.border, { default: lineWidth + " " + lineStyle + " " + color }),
+        border: __assign(__assign({}, defaultFrame.border), { default: lineWidth + " " + lineStyle + " " + color }),
     }, userFrame);
     return created;
 };

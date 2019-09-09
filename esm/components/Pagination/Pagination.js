@@ -2,6 +2,13 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
@@ -15,7 +22,7 @@ var PaginationComponent = function (_a) {
         return null;
     var prevPage = current >= 2 && (React.createElement("li", null,
         React.createElement(PrevPaginationItem, { onClick: onClick, prevPage: current - 1 })));
-    var pages = range(current - padding, current).filter(function (page) { return page >= 1; }).concat(range(current, current + padding + 1).filter(function (page) { return page <= total; })).map(function (page) { return (React.createElement("li", { key: "pagination-" + page },
+    var pages = __spreadArrays(range(current - padding, current).filter(function (page) { return page >= 1; }), range(current, current + padding + 1).filter(function (page) { return page <= total; })).map(function (page) { return (React.createElement("li", { key: "pagination-" + page },
         React.createElement(PaginationItem, { page: page, currentPage: current, onClick: onClick }))); });
     var nextPage = current + 1 <= total && (React.createElement("li", null,
         React.createElement(NextPaginationItem, { onClick: onClick, nextPage: current + 1 })));

@@ -28,7 +28,7 @@ var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateO
 var Description = styled.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
     "\n"])), function (_a) {
     var theme = _a.theme;
-    return css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      margin-top: ", ";\n      color: ", ";\n      font-size: ", ";\n      line-height: 1.5;\n    "], ["\n      margin-top: ", ";\n      color: ", ";\n      font-size: ", ";\n      line-height: 1.5;\n    "])), theme.size.pxToRem(theme.size.space.XS), theme.palette.TEXT_BLACK, theme.size.font.TALL);
+    return css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      margin-top: ", ";\n      color: ", ";\n      font-size: ", ";\n      line-height: 1.5;\n    "], ["\n      margin-top: ", ";\n      color: ", ";\n      font-size: ", ";\n      line-height: 1.5;\n    "])), theme.size.pxToRem(theme.size.space.XS), theme.palette.TEXT_BLACK, theme.size.pxToRem(theme.size.font.TALL));
 });
 var templateObject_1, templateObject_2, templateObject_3;
 //# sourceMappingURL=HeadlineArea.js.map

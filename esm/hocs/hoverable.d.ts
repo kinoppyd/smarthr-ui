@@ -45,6 +45,28 @@ export declare const hoverable: ({ hoverClassName }?: Options) => <OriginalProps
         refs: {
             [key: string]: React.ReactInstance;
         };
+        componentDidMount?(): void;
+        shouldComponentUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): boolean;
+        componentWillUnmount?(): void;
+        componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
+        getSnapshotBeforeUpdate?(prevProps: Readonly<OriginalProps & ExternalProps>, prevState: Readonly<{
+            isHover: boolean;
+        }>): any;
+        componentDidUpdate?(prevProps: Readonly<OriginalProps & ExternalProps>, prevState: Readonly<{
+            isHover: boolean;
+        }>, snapshot?: any): void;
+        componentWillMount?(): void;
+        UNSAFE_componentWillMount?(): void;
+        componentWillReceiveProps?(nextProps: Readonly<OriginalProps & ExternalProps>, nextContext: any): void;
+        UNSAFE_componentWillReceiveProps?(nextProps: Readonly<OriginalProps & ExternalProps>, nextContext: any): void;
+        componentWillUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): void;
+        UNSAFE_componentWillUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): void;
     };
     new (props: OriginalProps & ExternalProps, context?: any): {
         state: {
@@ -74,6 +96,28 @@ export declare const hoverable: ({ hoverClassName }?: Options) => <OriginalProps
         refs: {
             [key: string]: React.ReactInstance;
         };
+        componentDidMount?(): void;
+        shouldComponentUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): boolean;
+        componentWillUnmount?(): void;
+        componentDidCatch?(error: Error, errorInfo: React.ErrorInfo): void;
+        getSnapshotBeforeUpdate?(prevProps: Readonly<OriginalProps & ExternalProps>, prevState: Readonly<{
+            isHover: boolean;
+        }>): any;
+        componentDidUpdate?(prevProps: Readonly<OriginalProps & ExternalProps>, prevState: Readonly<{
+            isHover: boolean;
+        }>, snapshot?: any): void;
+        componentWillMount?(): void;
+        UNSAFE_componentWillMount?(): void;
+        componentWillReceiveProps?(nextProps: Readonly<OriginalProps & ExternalProps>, nextContext: any): void;
+        UNSAFE_componentWillReceiveProps?(nextProps: Readonly<OriginalProps & ExternalProps>, nextContext: any): void;
+        componentWillUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): void;
+        UNSAFE_componentWillUpdate?(nextProps: Readonly<OriginalProps & ExternalProps>, nextState: Readonly<{
+            isHover: boolean;
+        }>, nextContext: any): void;
     };
     displayName: string;
     contextType?: React.Context<any> | undefined;
