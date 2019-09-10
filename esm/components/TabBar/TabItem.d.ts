@@ -1,7 +1,7 @@
-/// <reference types="react" />
+import * as React from 'react';
 export interface Props {
     id: string;
-    label: string;
+    children: React.ReactNode;
     selected?: boolean;
     disabled?: boolean;
     className?: string;

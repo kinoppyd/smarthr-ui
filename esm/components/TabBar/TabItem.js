@@ -7,12 +7,12 @@ import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { isTouchDevice } from '../../libs/ua';
 var TabItemComponent = function (_a) {
-    var id = _a.id, label = _a.label, onClick = _a.onClick, theme = _a.theme, _b = _a.selected, selected = _b === void 0 ? false : _b, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.disabled, disabled = _d === void 0 ? false : _d;
+    var id = _a.id, children = _a.children, onClick = _a.onClick, theme = _a.theme, _b = _a.selected, selected = _b === void 0 ? false : _b, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.disabled, disabled = _d === void 0 ? false : _d;
     var classNames = className + " " + (selected ? 'selected' : '');
     var handleClick = function () {
         onClick(id);
     };
-    return (React.createElement(Wrapper, { role: "tab", "aria-selected": selected, className: classNames, onClick: handleClick, theme: theme, disabled: disabled }, label));
+    return (React.createElement(Wrapper, { role: "tab", "aria-selected": selected, className: classNames, onClick: handleClick, theme: theme, disabled: disabled }, children));
 };
 export var TabItem = withTheme(TabItemComponent);
 var resetButtonStyle = css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding: 0;\n  appearance: none;\n"], ["\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  outline: none;\n  padding: 0;\n  appearance: none;\n"])));

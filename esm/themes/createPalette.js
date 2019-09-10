@@ -10,12 +10,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { merge } from '../libs/lodash';
-import { darken, rgba } from 'polished';
-var hoverColor = function (value) { return darken(0.05, value); };
-var disableColor = function (value) { return rgba(value, 0.5); };
+import { darken, rgba, transparentize } from 'polished';
 export var defaultPalette = {
-    hoverColor: hoverColor,
-    disableColor: disableColor,
     TEXT_BLACK: '#333',
     TEXT_GREY: '#767676',
     BORDER: '#d6d6d6',
@@ -29,7 +25,9 @@ export var defaultPalette = {
 };
 export var createPalette = function (userPalette) {
     if (userPalette === void 0) { userPalette = {}; }
-    var created = merge(__assign({}, defaultPalette), userPalette);
+    var created = merge(__assign({ hoverColor: function (value) { return darken(0.05, value); }, disableColor: function (value) { return rgba(value, 0.5); }, OUTLINE: transparentize(0.5, defaultPalette.MAIN) }, defaultPalette), userPalette, userPalette.OUTLINE == null && userPalette.MAIN != null
+        ? { OUTLINE: transparentize(0.5, userPalette.MAIN) }
+        : null);
     return created;
 };
 //# sourceMappingURL=createPalette.js.map
