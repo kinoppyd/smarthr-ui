@@ -11,6 +11,8 @@ declare const iconMap: {
     'fa-address-card': import("react-icons/lib/cjs").IconType;
     'fa-angle-double-down': import("react-icons/lib/cjs").IconType;
     'fa-angle-down': import("react-icons/lib/cjs").IconType;
+    'fa-angle-left': import("react-icons/lib/cjs").IconType;
+    'fa-angle-right': import("react-icons/lib/cjs").IconType;
     'fa-arrow-circle-down': import("react-icons/lib/cjs").IconType;
     'fa-arrow-down': import("react-icons/lib/cjs").IconType;
     'fa-birthday-cake': import("react-icons/lib/cjs").IconType;
