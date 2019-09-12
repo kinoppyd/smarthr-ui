@@ -5,6 +5,7 @@ export declare type TableGroupContextValue = {
 };
 export declare const TableGroupContext: React.Context<TableGroupContextValue>;
 export declare type Props = {
+    children?: React.ReactNode;
     className?: string;
 };
-export declare const Table: React.FC<Props>;
+export declare const Table: (props: Props) => JSX.Element;
