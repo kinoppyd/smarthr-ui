@@ -2,26 +2,15 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { Heading } from '../Heading/Heading';
 var HeadlineAreaComponent = function (_a) {
-    var theme = _a.theme, props = __rest(_a, ["theme"]);
-    return (React.createElement(Wrapper, { theme: theme },
-        React.createElement(Heading, { type: "screenTitle", tag: props.heading.tag ? props.heading.tag : 'h1' }, props.heading.children),
-        props.description && React.createElement(Description, { theme: theme }, props.description)));
+    var heading = _a.heading, description = _a.description, _b = _a.className, className = _b === void 0 ? '' : _b, theme = _a.theme;
+    return (React.createElement(Wrapper, { theme: theme, className: className },
+        React.createElement(Heading, { type: "screenTitle", tag: heading.tag ? heading.tag : 'h1' }, heading.children),
+        description && React.createElement(Description, { theme: theme }, description)));
 };
 export var HeadlineArea = withTheme(HeadlineAreaComponent);
 var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: block;\n  margin: 0;\n  padding: 0;\n"], ["\n  display: block;\n  margin: 0;\n  padding: 0;\n"])));

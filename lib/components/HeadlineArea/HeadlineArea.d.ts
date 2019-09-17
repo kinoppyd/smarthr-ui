@@ -6,6 +6,7 @@ interface Props {
         tag?: HeadingProps['tag'];
     };
     description?: React.ReactNode;
+    className?: string;
 }
 export declare const HeadlineArea: (props: Props) => JSX.Element;
 export {};

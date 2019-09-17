@@ -8,9 +8,9 @@ import { withTheme } from '../../hocs/withTheme';
 import { NumberInput, PasswordInput, TextInput } from '../Input';
 import { Tag } from '../Tag';
 var fieldFactory = function (InputComponent) { return function (_a) {
-    var label = _a.label, _b = _a.name, name = _b === void 0 ? '' : _b, _c = _a.value, value = _c === void 0 ? '' : _c, required = _a.required, placeholder = _a.placeholder, disabled = _a.disabled, error = _a.error, help = _a.help, width = _a.width, onChange = _a.onChange, onBlur = _a.onBlur, theme = _a.theme, children = _a.children;
+    var label = _a.label, _b = _a.name, name = _b === void 0 ? '' : _b, _c = _a.value, value = _c === void 0 ? '' : _c, required = _a.required, placeholder = _a.placeholder, disabled = _a.disabled, error = _a.error, help = _a.help, width = _a.width, _d = _a.className, className = _d === void 0 ? '' : _d, onChange = _a.onChange, onBlur = _a.onBlur, theme = _a.theme, children = _a.children;
     var widthStyle = typeof width === 'number' ? width + "px" : width;
-    return (React.createElement(Wrapper, { width: widthStyle },
+    return (React.createElement(Wrapper, { width: widthStyle, className: className },
         React.createElement(LabelHead, { theme: theme },
             React.createElement(Title, { theme: theme },
                 label,

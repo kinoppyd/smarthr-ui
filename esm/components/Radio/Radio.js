@@ -30,11 +30,11 @@ var RadioComponent = /** @class */ (function (_super) {
         return _this;
     }
     RadioComponent.prototype.render = function () {
-        var _a = this.props, checked = _a.checked, name = _a.name, _b = _a.disabled, disabled = _b === void 0 ? false : _b, _c = _a.themeColor, themeColor = _c === void 0 ? 'light' : _c, theme = _a.theme;
-        var classNames = (checked ? 'active' : '') + " " + (disabled ? 'disabled' : '') + " " + themeColor;
-        return (React.createElement(Wrapper, null,
+        var _a = this.props, checked = _a.checked, name = _a.name, _b = _a.disabled, disabled = _b === void 0 ? false : _b, _c = _a.themeColor, themeColor = _c === void 0 ? 'light' : _c, _d = _a.className, className = _d === void 0 ? '' : _d, theme = _a.theme;
+        var boxClassName = (checked ? 'active' : '') + " " + (disabled ? 'disabled' : '') + " " + themeColor;
+        return (React.createElement(Wrapper, { className: className },
             React.createElement(Input, { type: "radio", checked: checked, name: name, disabled: disabled, theme: theme, onChange: this.handleChange }),
-            React.createElement(Box, { className: classNames, theme: theme })));
+            React.createElement(Box, { className: boxClassName, theme: theme })));
     };
     return RadioComponent;
 }(React.PureComponent));

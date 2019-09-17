@@ -6,8 +6,8 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 var TagComponent = function (_a) {
-    var _b = _a.type, type = _b === void 0 ? 'done' : _b, children = _a.children, theme = _a.theme;
-    return (React.createElement(Wrapper, { theme: theme, className: type }, children));
+    var _b = _a.type, type = _b === void 0 ? 'done' : _b, _c = _a.className, className = _c === void 0 ? '' : _c, children = _a.children, theme = _a.theme;
+    return (React.createElement(Wrapper, { theme: theme, className: type + " " + className }, children));
 };
 var BorderStyle = css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
     "\n"])), function (_a) {

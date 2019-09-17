@@ -9,6 +9,7 @@ interface Props {
     error?: string;
     help?: string;
     width?: number | string;
+    className?: string;
     onChange?: (name: string, value: string) => void;
     onBlur?: (name: string, value: string) => void;
     children?: React.ReactNode;

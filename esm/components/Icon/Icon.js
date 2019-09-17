@@ -77,8 +77,8 @@ var iconMap = {
     'fa-users': FaUsers,
 };
 export var Icon = function (_a) {
-    var name = _a.name, props = __rest(_a, ["name"]);
+    var name = _a.name, _b = _a.className, className = _b === void 0 ? '' : _b, props = __rest(_a, ["name", "className"]);
     var SvgIcon = iconMap[name];
-    return React.createElement(SvgIcon, __assign({}, props));
+    return React.createElement(SvgIcon, __assign({ className: className }, props));
 };
 //# sourceMappingURL=Icon.js.map

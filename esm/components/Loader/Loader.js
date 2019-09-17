@@ -6,10 +6,8 @@ import * as React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 var LoaderComponent = function (_a) {
-    var color = _a.color, size = _a.size;
-    var loaderColor = color || '#fff';
-    var loaderSize = size || 'm';
-    return (React.createElement(Wrapper, { className: loaderSize, color: loaderColor },
+    var _b = _a.color, color = _b === void 0 ? '#fff' : _b, _c = _a.size, size = _c === void 0 ? 'm' : _c, _d = _a.className, className = _d === void 0 ? '' : _d;
+    return (React.createElement(Wrapper, { className: size + " " + className, color: color },
         React.createElement("div", null),
         React.createElement("div", null),
         React.createElement("div", null),

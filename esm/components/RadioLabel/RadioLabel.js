@@ -29,8 +29,8 @@ import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { Radio } from '../Radio';
 var RadioLabelComponent = function (_a) {
-    var label = _a.label, theme = _a.theme, props = __rest(_a, ["label", "theme"]);
-    return (React.createElement(Wrapper, null,
+    var label = _a.label, _b = _a.className, className = _b === void 0 ? '' : _b, theme = _a.theme, props = __rest(_a, ["label", "className", "theme"]);
+    return (React.createElement(Wrapper, { className: className },
         React.createElement(Label, { className: "" + (props.disabled ? 'disabled' : '') },
             React.createElement(Radio, __assign({}, props)),
             React.createElement(Txt, { theme: theme }, label))));

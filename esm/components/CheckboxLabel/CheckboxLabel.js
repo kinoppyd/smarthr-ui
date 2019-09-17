@@ -29,8 +29,8 @@ import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { Checkbox } from '../Checkbox';
 var CheckboxLabelComponent = function (_a) {
-    var label = _a.label, theme = _a.theme, props = __rest(_a, ["label", "theme"]);
-    return (React.createElement(Wrapper, null,
+    var label = _a.label, theme = _a.theme, _b = _a.className, className = _b === void 0 ? '' : _b, props = __rest(_a, ["label", "theme", "className"]);
+    return (React.createElement(Wrapper, { className: className },
         React.createElement(Label, { className: "" + (props.disabled ? 'disabled' : '') },
             React.createElement(Checkbox, __assign({}, props)),
             React.createElement(Txt, { theme: theme }, label))));

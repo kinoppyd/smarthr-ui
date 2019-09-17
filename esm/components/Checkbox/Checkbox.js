@@ -32,10 +32,10 @@ var CheckboxComponent = /** @class */ (function (_super) {
     }
     CheckboxComponent.prototype.render = function () {
         var _a = this.props, checked = _a.checked, name = _a.name, _b = _a.disabled, disabled = _b === void 0 ? false : _b, _c = _a.themeColor, themeColor = _c === void 0 ? 'light' : _c, theme = _a.theme, _d = _a.className, className = _d === void 0 ? '' : _d;
-        var classNames = "\n      " + className + " " + (checked ? 'active' : '') + " " + (disabled ? 'disabled' : '') + " " + themeColor + "\n    ";
-        return (React.createElement(Wrapper, { theme: theme },
+        var boxClassName = (checked ? 'active' : '') + " " + (disabled ? 'disabled' : '') + " " + themeColor;
+        return (React.createElement(Wrapper, { theme: theme, className: className },
             React.createElement(Input, { type: "checkbox", checked: checked, name: name, disabled: disabled, theme: theme, onChange: this.handleChange }),
-            React.createElement(Box, { className: classNames, theme: theme }),
+            React.createElement(Box, { className: boxClassName, theme: theme }),
             checked && (React.createElement(IconWrap, null,
                 React.createElement(Icon, { name: "fa-check", size: 12, color: themeColor === 'light' ? '#fff' : theme.palette.MAIN })))));
     };

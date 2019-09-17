@@ -5,6 +5,7 @@ export interface IconProps {
 }
 export interface Props extends IconProps {
     name: keyof typeof iconMap;
+    className?: string;
 }
 declare const iconMap: {
     'fa-address-book': import("react-icons/lib/cjs").IconType;
