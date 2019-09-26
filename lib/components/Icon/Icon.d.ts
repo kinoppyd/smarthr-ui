@@ -44,6 +44,7 @@ declare const iconMap: {
   'fa-grip-vertical': import('react-icons/lib/cjs').IconType
   'fa-lock': import('react-icons/lib/cjs').IconType
   'fa-lock-open': import('react-icons/lib/cjs').IconType
+  'fa-minus': import('react-icons/lib/cjs').IconType
   'fa-pencil-alt': import('react-icons/lib/cjs').IconType
   'fa-plus': import('react-icons/lib/cjs').IconType
   'fa-plus-circle': import('react-icons/lib/cjs').IconType
