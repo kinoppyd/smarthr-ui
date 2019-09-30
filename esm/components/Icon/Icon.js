@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import * as React from 'react';
-import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationTriangle, FaExternalLinkAlt, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaLock, FaLockOpen, FaMinus, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
+import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationCircle, FaExclamationTriangle, FaExternalLinkAlt, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaLock, FaLockOpen, FaMinus, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
 var iconMap = {
     'fa-address-book': FaAddressBook,
     'fa-address-card': FaAddressCard,
@@ -45,6 +45,7 @@ var iconMap = {
     'fa-databas': FaDatabase,
     'fa-ellipsis-h': FaEllipsisH,
     'fa-envelope': FaEnvelope,
+    'fa-exclamation-circle': FaExclamationCircle,
     'fa-exclamation-triangle': FaExclamationTriangle,
     'fa-external-link-alt': FaExternalLinkAlt,
     'fa-file': FaFile,
