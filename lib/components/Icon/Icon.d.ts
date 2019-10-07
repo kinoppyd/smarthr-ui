@@ -20,6 +20,7 @@ declare const iconMap: {
     'fa-building': import("react-icons/lib/cjs").IconType;
     'fa-calendar-alt': import("react-icons/lib/cjs").IconType;
     'fa-caret-down': import("react-icons/lib/cjs").IconType;
+    'fa-caret-up': import("react-icons/lib/cjs").IconType;
     'fa-chart-area': import("react-icons/lib/cjs").IconType;
     'fa-chart-bar': import("react-icons/lib/cjs").IconType;
     'fa-chart-line': import("react-icons/lib/cjs").IconType;

@@ -1,26 +1,12 @@
-import * as React from 'react';
-import { Rect } from './DropdownContent';
-interface Props {
-    children?: React.ReactNode;
-}
-interface State {
+import React from 'react';
+import { Rect } from './dropdownHelper';
+declare type DropdownContextType = {
+    key: string;
     active: boolean;
-    clientRect?: Rect;
-}
-interface DropdownContext {
-    keyName: string;
-    active: boolean;
-    clientRect?: Rect;
-    toggleDropdown: (clientRect: Rect) => void;
-}
-export declare const DropdownConsumer: React.ExoticComponent<React.ConsumerProps<DropdownContext>>;
-export declare class Dropdown extends React.PureComponent<Props, State> {
-    state: State;
-    keyName: string;
-    componentDidMount: () => void;
-    componentWillUnmount(): void;
-    render(): JSX.Element;
-    private handleToggle;
-    private handleClickBody;
-}
+    triggerRect: Rect;
+    onClickTrigger: (rect: Rect) => void;
+    onClickCloser: () => void;
+};
+export declare const DropdownContext: React.Context<DropdownContextType>;
+export declare const Dropdown: React.FC<{}>;
 export {};
