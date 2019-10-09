@@ -13,21 +13,28 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { range } from '../../libs/lodash';
-import { NextPaginationItem } from './NextPaginationItem';
 import { PaginationItem } from './PaginationItem';
-import { PrevPaginationItem } from './PrevPaginationItem';
+import { PaginationControllerItem } from './PaginationControllerItem';
 var PaginationComponent = function (_a) {
-    var total = _a.total, current = _a.current, onClick = _a.onClick, _b = _a.padding, padding = _b === void 0 ? 4 : _b, _c = _a.className, className = _c === void 0 ? '' : _c, theme = _a.theme;
+    var total = _a.total, current = _a.current, onClick = _a.onClick, _b = _a.padding, padding = _b === void 0 ? 4 : _b, _c = _a.className, className = _c === void 0 ? '' : _c, _d = _a.withoutNumbers, withoutNumbers = _d === void 0 ? false : _d, theme = _a.theme;
     if (total <= 1)
         return null;
-    var prevPage = current >= 2 && (React.createElement("li", null,
-        React.createElement(PrevPaginationItem, { onClick: onClick, prevPage: current - 1 })));
-    var pages = __spreadArrays(range(current - padding, current).filter(function (page) { return page >= 1; }), range(current, current + padding + 1).filter(function (page) { return page <= total; })).map(function (page) { return (React.createElement("li", { key: "pagination-" + page },
-        React.createElement(PaginationItem, { page: page, currentPage: current, onClick: onClick }))); });
-    var nextPage = current + 1 <= total && (React.createElement("li", null,
-        React.createElement(NextPaginationItem, { onClick: onClick, nextPage: current + 1 })));
+    var prevPage = (React.createElement(React.Fragment, null,
+        React.createElement("li", { className: "prevDouble" },
+            React.createElement(PaginationControllerItem, { onClick: onClick, direction: "prev", targetPage: 1, disabled: current === 1, double: true })),
+        React.createElement("li", { className: "prev" },
+            React.createElement(PaginationControllerItem, { onClick: onClick, direction: "prev", targetPage: current - 1, disabled: current === 1 }))));
+    var pages = !withoutNumbers
+        ? __spreadArrays(range(current - padding, current).filter(function (page) { return page >= 1; }), range(current, current + padding + 1).filter(function (page) { return page <= total; })).map(function (page) { return (React.createElement("li", { key: "pagination-" + page },
+            React.createElement(PaginationItem, { page: page, currentPage: current, onClick: onClick }))); })
+        : null;
+    var nextPage = (React.createElement(React.Fragment, null,
+        React.createElement("li", { className: "next" },
+            React.createElement(PaginationControllerItem, { onClick: onClick, direction: "next", targetPage: current + 1, disabled: current === total })),
+        React.createElement("li", { className: "nextDouble" },
+            React.createElement(PaginationControllerItem, { onClick: onClick, direction: "next", targetPage: total, disabled: current === total, double: true }))));
     return (React.createElement(Wrapper, { className: className },
-        React.createElement(List, { theme: theme },
+        React.createElement(List, { theme: theme, className: withoutNumbers ? 'withoutNumbers' : '' },
             prevPage,
             pages,
             nextPage)));
@@ -37,8 +44,8 @@ var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateO
 var List = styled.ul(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
     "\n"])), function (_a) {
     var theme = _a.theme;
-    var frame = theme.frame, palette = theme.palette;
-    return css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      display: flex;\n      border-radius: ", ";\n      border: 1px solid ", ";\n      margin: 0;\n      padding: 0;\n\n      & > li {\n        margin: 0;\n        padding: 0;\n        list-style: none;\n\n        &:not(:first-child) {\n          border-left: ", ";\n        }\n\n        &:first-child > .PaginationItem {\n          border-top-left-radius: ", ";\n          border-bottom-left-radius: ", ";\n        }\n\n        &:last-child > .PaginationItem {\n          border-top-right-radius: ", ";\n          border-bottom-right-radius: ", ";\n        }\n      }\n    "], ["\n      display: flex;\n      border-radius: ", ";\n      border: 1px solid ", ";\n      margin: 0;\n      padding: 0;\n\n      & > li {\n        margin: 0;\n        padding: 0;\n        list-style: none;\n\n        &:not(:first-child) {\n          border-left: ", ";\n        }\n\n        &:first-child > .PaginationItem {\n          border-top-left-radius: ", ";\n          border-bottom-left-radius: ", ";\n        }\n\n        &:last-child > .PaginationItem {\n          border-top-right-radius: ", ";\n          border-bottom-right-radius: ", ";\n        }\n      }\n    "])), frame.border.radius.s, palette.BORDER, frame.border.default, frame.border.radius.s, frame.border.radius.s, frame.border.radius.s, frame.border.radius.s);
+    var size = theme.size;
+    return css(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      display: flex;\n      margin: 0;\n      padding: 0;\n      > li {\n        list-style: none;\n        margin-left: ", ";\n        &.prev {\n          margin-right: ", ";\n          + li {\n            margin-left: 0;\n          }\n        }\n        &.next {\n          margin-left: ", ";\n        }\n        &.prevDouble {\n          margin-left: 0;\n        }\n      }\n      &.withoutNumbers {\n        > li {\n          &.prev {\n            margin-left: ", ";\n            margin-right: 0;\n          }\n          &.next {\n            margin-left: ", ";\n          }\n          &.nextDouble {\n            margin-left: ", ";\n          }\n        }\n      }\n    "], ["\n      display: flex;\n      margin: 0;\n      padding: 0;\n      > li {\n        list-style: none;\n        margin-left: ", ";\n        &.prev {\n          margin-right: ", ";\n          + li {\n            margin-left: 0;\n          }\n        }\n        &.next {\n          margin-left: ", ";\n        }\n        &.prevDouble {\n          margin-left: 0;\n        }\n      }\n      &.withoutNumbers {\n        > li {\n          &.prev {\n            margin-left: ", ";\n            margin-right: 0;\n          }\n          &.next {\n            margin-left: ", ";\n          }\n          &.nextDouble {\n            margin-left: ", ";\n          }\n        }\n      }\n    "])), size.pxToRem(size.space.XXS), size.pxToRem(size.space.XS), size.pxToRem(size.space.XS), size.pxToRem(size.space.XS), size.pxToRem(size.space.XXS), size.pxToRem(size.space.XS));
 });
 var templateObject_1, templateObject_2, templateObject_3;
 //# sourceMappingURL=Pagination.js.map
