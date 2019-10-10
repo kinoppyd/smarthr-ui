@@ -7,10 +7,12 @@ export interface Props extends IconProps {
     name: keyof typeof iconMap;
     className?: string;
 }
-declare const iconMap: {
+export declare const iconMap: {
     'fa-address-book': import("react-icons/lib/cjs").IconType;
     'fa-address-card': import("react-icons/lib/cjs").IconType;
     'fa-angle-double-down': import("react-icons/lib/cjs").IconType;
+    'fa-angle-double-left': import("react-icons/lib/cjs").IconType;
+    'fa-angle-double-right': import("react-icons/lib/cjs").IconType;
     'fa-angle-down': import("react-icons/lib/cjs").IconType;
     'fa-angle-left': import("react-icons/lib/cjs").IconType;
     'fa-angle-right': import("react-icons/lib/cjs").IconType;
@@ -27,6 +29,8 @@ declare const iconMap: {
     'fa-chart-pie': import("react-icons/lib/cjs").IconType;
     'fa-check': import("react-icons/lib/cjs").IconType;
     'fa-check-circle': import("react-icons/lib/cjs").IconType;
+    'fa-chevron-left': import("react-icons/lib/cjs").IconType;
+    'fa-chevron-right': import("react-icons/lib/cjs").IconType;
     'fa-cog': import("react-icons/lib/cjs").IconType;
     'fa-databas': import("react-icons/lib/cjs").IconType;
     'fa-ellipsis-h': import("react-icons/lib/cjs").IconType;
@@ -44,6 +48,7 @@ declare const iconMap: {
     'fa-filter': import("react-icons/lib/cjs").IconType;
     'fa-font': import("react-icons/lib/cjs").IconType;
     'fa-grip-vertical': import("react-icons/lib/cjs").IconType;
+    'fa-info-circle': import("react-icons/lib/cjs").IconType;
     'fa-lock': import("react-icons/lib/cjs").IconType;
     'fa-lock-open': import("react-icons/lib/cjs").IconType;
     'fa-minus': import("react-icons/lib/cjs").IconType;
@@ -66,4 +71,3 @@ declare const iconMap: {
     'fa-users': import("react-icons/lib/cjs").IconType;
 };
 export declare const Icon: React.FC<Props>;
-export {};

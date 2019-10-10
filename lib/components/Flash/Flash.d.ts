@@ -1,6 +1,6 @@
 /// <reference types="react" />
 interface Props {
-    type: 'success' | 'info' | 'alert' | 'danger' | '';
+    type: 'success' | 'info' | 'warning' | 'error' | '';
     text: string;
     visible: boolean;
     className?: string;

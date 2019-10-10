@@ -17,9 +17,8 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 };
 import * as React from 'react';
 import styled, { css } from 'styled-components';
-import { hoverable } from '../../hocs/hoverable';
 import { withTheme } from '../../hocs/withTheme';
-import { isTouchDevice } from '../../libs/ua';
+import { SecondaryButton } from '../Button';
 var PaginationItemComponent = /** @class */ (function (_super) {
     __extends(PaginationItemComponent, _super);
     function PaginationItemComponent() {
@@ -33,19 +32,18 @@ var PaginationItemComponent = /** @class */ (function (_super) {
     PaginationItemComponent.prototype.render = function () {
         var _a = this.props, page = _a.page, currentPage = _a.currentPage, theme = _a.theme;
         if (page === currentPage) {
-            return (React.createElement(Item, { className: "PaginationItem active", theme: theme }, page));
+            return (React.createElement(ItemButton, { square: true, size: "s", className: "paginationItem active", theme: theme, disabled: true }, page));
         }
-        return (React.createElement(ItemButton, { className: "PaginationItem", onClick: this.onClick, theme: theme }, page));
+        return (React.createElement(ItemButton, { square: true, size: "s", className: "paginationItem", onClick: this.onClick, theme: theme }, page));
     };
     return PaginationItemComponent;
 }(React.PureComponent));
 export var PaginationItem = withTheme(PaginationItemComponent);
-var Item = styled.span(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
+export var ItemButton = styled(SecondaryButton)(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
     "\n"])), function (_a) {
     var theme = _a.theme;
-    var size = theme.size, palette = theme.palette, interaction = theme.interaction;
-    return css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n      display: inline-block;\n      width: 34px;\n      padding: 0;\n      border: none;\n      background-color: #fff;\n      font-size: ", ";\n      color: ", ";\n      line-height: 32px;\n      text-align: center;\n      cursor: pointer;\n      outline: 0;\n      transition: ", ";\n\n      &.active {\n        color: #fff;\n        background-color: ", ";\n      }\n\n      &.hover {\n        color: ", ";\n        background-color: ", ";\n      }\n    "], ["\n      display: inline-block;\n      width: 34px;\n      padding: 0;\n      border: none;\n      background-color: #fff;\n      font-size: ", ";\n      color: ", ";\n      line-height: 32px;\n      text-align: center;\n      cursor: pointer;\n      outline: 0;\n      transition: ", ";\n\n      &.active {\n        color: #fff;\n        background-color: ", ";\n      }\n\n      &.hover {\n        color: ", ";\n        background-color: ", ";\n      }\n    "])), size.pxToRem(size.font.TALL), palette.MAIN, isTouchDevice ? 'none' : "background-color " + interaction.hover.animation, palette.MAIN, palette.MAIN, palette.hoverColor('#fff'));
+    var palette = theme.palette;
+    return css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n      &.paginationItem.s.square {\n        line-height: 25px;\n        border-radius: 4px;\n        &.active {\n          color: #fff;\n          background-color: ", ";\n          border: solid 1px ", ";\n          cursor: default;\n          outline: none;\n        }\n      }\n    "], ["\n      &.paginationItem.s.square {\n        line-height: 25px;\n        border-radius: 4px;\n        &.active {\n          color: #fff;\n          background-color: ", ";\n          border: solid 1px ", ";\n          cursor: default;\n          outline: none;\n        }\n      }\n    "])), palette.MAIN, palette.MAIN);
 });
-export var ItemButton = hoverable()(Item.withComponent('button'));
 var templateObject_1, templateObject_2;
 //# sourceMappingURL=PaginationItem.js.map

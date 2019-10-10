@@ -1,6 +1,7 @@
 export interface PaletteProperty {
     TEXT_BLACK?: string;
     TEXT_GREY?: string;
+    TEXT_DISABLED?: string;
     BORDER?: string;
     BACKGROUND?: string;
     COLUMN?: string;
@@ -16,6 +17,7 @@ export interface CreatedPaletteTheme {
     disableColor: (value: string) => string;
     TEXT_BLACK: string;
     TEXT_GREY: string;
+    TEXT_DISABLED: string;
     BORDER: string;
     BACKGROUND: string;
     COLUMN: string;
@@ -29,6 +31,7 @@ export interface CreatedPaletteTheme {
 export declare const defaultPalette: {
     TEXT_BLACK: string;
     TEXT_GREY: string;
+    TEXT_DISABLED: string;
     BORDER: string;
     BACKGROUND: string;
     COLUMN: string;
