@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import * as React from 'react';
-import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaCaretUp, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaChevronLeft, FaChevronRight, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationCircle, FaExclamationTriangle, FaExternalLinkAlt, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaInfoCircle, FaLock, FaLockOpen, FaMinus, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
+import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaCaretUp, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaChevronLeft, FaChevronRight, FaClone, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationCircle, FaExclamationTriangle, FaExternalLinkAlt, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaInfoCircle, FaLock, FaLockOpen, FaMinus, FaPaperPlane, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaReply, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
 export var iconMap = {
     'fa-address-book': FaAddressBook,
     'fa-address-card': FaAddressCard,
@@ -46,6 +46,7 @@ export var iconMap = {
     'fa-check-circle': FaCheckCircle,
     'fa-chevron-left': FaChevronLeft,
     'fa-chevron-right': FaChevronRight,
+    'fa-clone': FaClone,
     'fa-cog': FaCog,
     'fa-databas': FaDatabase,
     'fa-ellipsis-h': FaEllipsisH,
@@ -67,6 +68,7 @@ export var iconMap = {
     'fa-lock': FaLock,
     'fa-lock-open': FaLockOpen,
     'fa-minus': FaMinus,
+    'fa-paper-plane': FaPaperPlane,
     'fa-pencil-alt': FaPencilAlt,
     'fa-plus': FaPlus,
     'fa-plus-circle': FaPlusCircle,
@@ -74,6 +76,7 @@ export var iconMap = {
     'fa-reg-calendar-check': FaRegCalendarCheck,
     'fa-reg-chart-bar': FaRegChartBar,
     'fa-reg-image': FaRegImage,
+    'fa-reply': FaReply,
     'fa-search': FaSearch,
     'fa-sliders-h': FaSlidersH,
     'fa-sort': FaSort,
