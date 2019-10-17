@@ -1,6 +1,5 @@
 export { Dropdown } from './Dropdown';
 export { DropdownTrigger } from './DropdownTrigger';
 export { DropdownContent } from './DropdownContent';
-export { DropdownControllableContent } from './DropdownControllableContent';
 export { DropdownCloser } from './DropdownCloser';
 //# sourceMappingURL=index.js.map
