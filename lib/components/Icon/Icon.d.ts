@@ -32,6 +32,7 @@ export declare const iconMap: {
   'fa-chevron-left': import('react-icons/lib/cjs').IconType
   'fa-chevron-right': import('react-icons/lib/cjs').IconType
   'fa-clone': import('react-icons/lib/cjs').IconType
+  'fa-cloud-download-alt': import('react-icons/lib/cjs').IconType
   'fa-cog': import('react-icons/lib/cjs').IconType
   'fa-databas': import('react-icons/lib/cjs').IconType
   'fa-ellipsis-h': import('react-icons/lib/cjs').IconType
