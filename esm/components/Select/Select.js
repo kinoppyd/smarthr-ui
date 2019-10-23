@@ -25,9 +25,10 @@ var SelectComponent = /** @class */ (function (_super) {
     function SelectComponent() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.handleChange = function (e) {
-            var onChange = _this.props.onChange;
+            var _a = _this.props, name = _a.name, onChange = _a.onChange;
+            var value = e.currentTarget.value;
             if (onChange)
-                onChange(e);
+                onChange(name, value);
         };
         return _this;
     }

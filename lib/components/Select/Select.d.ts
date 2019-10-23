@@ -1,13 +1,19 @@
-import * as React from 'react';
+/// <reference types="react" />
 interface Option {
     label: string;
     value: string;
 }
-declare type Props = React.SelectHTMLAttributes<HTMLSelectElement> & {
+interface Props {
+    className?: string;
+    value: string;
+    name: string;
+    required?: boolean;
+    disabled?: boolean;
     error?: boolean;
     width?: number | string;
     options: Option[];
     labelText?: string;
-};
+    onChange?: (name: string, value: string) => void;
+}
 export declare const Select: (props: Props) => JSX.Element;
 export {};
