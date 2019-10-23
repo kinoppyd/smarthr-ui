@@ -4,8 +4,7 @@ export declare type Rect = {
     bottom: number;
     left: number;
 };
-export declare function getRandomStr(): string;
-export declare function getParentElementByClassNameRecursively(element: HTMLElement | null, className?: string): HTMLElement | null;
+export declare function hasParentElement(element: HTMLElement | null, parent: HTMLElement | null): boolean;
 declare type Size = {
     width: number;
     height: number;

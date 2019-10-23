@@ -7,8 +7,8 @@ import styled from 'styled-components';
 import { DropdownContext } from './Dropdown';
 export var DropdownTrigger = function (_a) {
     var children = _a.children;
-    var _b = useContext(DropdownContext), key = _b.key, active = _b.active, onClickTrigger = _b.onClickTrigger;
-    return (React.createElement(Wrapper, { className: "dropdown-trigger-" + key, onClick: function (e) {
+    var _b = useContext(DropdownContext), active = _b.active, onClickTrigger = _b.onClickTrigger;
+    return (React.createElement(Wrapper, { onClick: function (e) {
             var rect = e.currentTarget.getBoundingClientRect();
             onClickTrigger({
                 top: rect.top,
