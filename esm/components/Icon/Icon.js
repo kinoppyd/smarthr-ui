@@ -21,7 +21,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import * as React from 'react';
-import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaCaretUp, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaChevronLeft, FaChevronRight, FaClone, FaCloudDownloadAlt, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationCircle, FaExclamationTriangle, FaExternalLinkAlt, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaInfoCircle, FaLock, FaLockOpen, FaMinus, FaPaperPlane, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaReply, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
+import { FaAddressBook, FaAddressCard, FaAngleDoubleDown, FaAngleDoubleLeft, FaAngleDoubleRight, FaAngleDown, FaAngleLeft, FaAngleRight, FaArrowCircleDown, FaArrowDown, FaBirthdayCake, FaBuilding, FaCalendarAlt, FaCaretDown, FaCaretUp, FaChartArea, FaChartBar, FaChartLine, FaChartPie, FaCheck, FaCheckCircle, FaChevronLeft, FaChevronRight, FaClone, FaCloudDownloadAlt, FaCog, FaDatabase, FaEllipsisH, FaEnvelope, FaExclamationCircle, FaExclamationTriangle, FaExternalLinkAlt, FaEye, FaFile, FaFileAlt, FaFileArchive, FaFileDownload, FaFileExport, FaFileImport, FaFileUpload, FaFilter, FaFont, FaGripVertical, FaInfoCircle, FaLock, FaLockOpen, FaMinus, FaPaperPlane, FaPencilAlt, FaPlus, FaPlusCircle, FaQuestionCircle, FaRegCalendarCheck, FaRegChartBar, FaRegImage, FaReply, FaSearch, FaSlidersH, FaSort, FaSyncAlt, FaTable, FaThList, FaTimes, FaUserAlt, FaUserCircle, FaUsers, } from 'react-icons/fa';
 export var iconMap = {
     'fa-address-book': FaAddressBook,
     'fa-address-card': FaAddressCard,
@@ -55,6 +55,7 @@ export var iconMap = {
     'fa-exclamation-circle': FaExclamationCircle,
     'fa-exclamation-triangle': FaExclamationTriangle,
     'fa-external-link-alt': FaExternalLinkAlt,
+    'fa-eye': FaEye,
     'fa-file': FaFile,
     'fa-file-alt': FaFileAlt,
     'fa-file-archive': FaFileArchive,
