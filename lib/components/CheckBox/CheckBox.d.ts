@@ -1,11 +1,6 @@
-/// <reference types="react" />
-export declare type Props = {
-  checked: boolean
-  name: string
+import React from 'react'
+export declare type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   themeColor?: 'light' | 'dark'
-  disabled?: boolean
   mixed?: boolean
-  className?: string
-  onChange?: (name: string, checked: boolean) => void
 }
 export declare const CheckBox: (props: Props) => JSX.Element
