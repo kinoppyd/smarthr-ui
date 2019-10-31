@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { hasParentElement } from './dropdownHelper';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
+import { hasParentElement } from './dropdownHelper';
 var initialRect = { top: 0, right: 0, bottom: 0, left: 0 };
 export var DropdownContext = React.createContext({
     active: false,
@@ -28,11 +28,13 @@ export var Dropdown = function (_a) {
         };
     }, [element]);
     // This is the root container of a dropdown content located in outside the DOM tree
-    var DropdownContentRoot = function (props) {
+    var DropdownContentRoot = useMemo(function () { return function (props) {
         if (!active)
             return null;
         return createPortal(props.children, element);
-    };
+    }; }, [active, element]);
+    // set the displayName explicit for DevTools
+    DropdownContentRoot.displayName = 'DropdownContentRoot';
     return (React.createElement(DropdownContext.Provider, { value: {
             active: active,
             triggerRect: triggerRect,
