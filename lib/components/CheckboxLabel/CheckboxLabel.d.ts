@@ -1,7 +1,7 @@
 /// <reference types="react" />
-import { Props as CheckboxProps } from '../Checkbox';
-declare type Props = CheckboxProps & {
+import { Props as CheckBoxProps } from '../CheckBox';
+declare type Props = CheckBoxProps & {
     label: string;
 };
-export declare const CheckboxLabel: (props: Props) => JSX.Element;
+export declare const CheckBoxLabel: (props: Props) => JSX.Element;
 export {};

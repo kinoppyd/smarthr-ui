@@ -9,12 +9,13 @@ declare type Size = {
     width: number;
     height: number;
 };
-export declare type Position = {
+export declare type ContentBoxStyle = {
     top: string;
     left: string;
+    maxHeight: string;
 };
-export declare function getContentPositionStyle(triggerRect: Rect, contentSize: Size, windowSize: Size, scroll: {
+export declare function getContentBoxStyle(triggerRect: Rect, contentSize: Size, windowSize: Size, scroll: {
     top: number;
     left: number;
-}): Position;
+}): ContentBoxStyle;
 export {};

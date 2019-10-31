@@ -1,2 +1,2 @@
-export * from './CheckboxLabel';
+export { CheckBoxLabel } from './CheckBoxLabel';
 //# sourceMappingURL=index.js.map

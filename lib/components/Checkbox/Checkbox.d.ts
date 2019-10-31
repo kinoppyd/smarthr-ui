@@ -8,4 +8,4 @@ export declare type Props = {
     className?: string;
     onChange?: (name: string, checked: boolean) => void;
 };
-export declare const Checkbox: (props: Props) => JSX.Element;
+export declare const CheckBox: (props: Props) => JSX.Element;

@@ -6,7 +6,7 @@ import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
 import { NumberInput, PasswordInput, TextInput } from '../Input';
-import { Tag } from '../Tag';
+import { StatusLabel } from '../StatusLabel';
 var fieldFactory = function (InputComponent) { return function (_a) {
     var label = _a.label, _b = _a.name, name = _b === void 0 ? '' : _b, _c = _a.value, value = _c === void 0 ? '' : _c, required = _a.required, placeholder = _a.placeholder, disabled = _a.disabled, error = _a.error, help = _a.help, width = _a.width, _d = _a.className, className = _d === void 0 ? '' : _d, onChange = _a.onChange, onBlur = _a.onBlur, theme = _a.theme, children = _a.children;
     var widthStyle = typeof width === 'number' ? width + "px" : width;
@@ -14,8 +14,8 @@ var fieldFactory = function (InputComponent) { return function (_a) {
         React.createElement(LabelHead, { theme: theme },
             React.createElement(Title, { theme: theme },
                 label,
-                required && (React.createElement(TagWrapper, { theme: theme },
-                    React.createElement(Tag, { type: "required" }, "\u5FC5\u9808")))),
+                required && (React.createElement(StatusLabelWrapper, { theme: theme },
+                    React.createElement(StatusLabel, { type: "required" }, "\u5FC5\u9808")))),
             help && React.createElement(Help, { theme: theme }, help)),
         InputComponent ? (React.createElement(InputComponent, { value: value, name: name, required: required, placeholder: placeholder, disabled: disabled, error: !!error, width: width, onChange: onChange, onBlur: onBlur })) : (children),
         error && React.createElement(Error, { theme: theme }, error)));
@@ -48,7 +48,7 @@ var Error = styled.p(templateObject_9 || (templateObject_9 = __makeTemplateObjec
     var theme = _a.theme;
     return css(templateObject_8 || (templateObject_8 = __makeTemplateObject(["\n    margin: ", " 0 0 0;\n    font-size: ", ";\n    color: ", ";\n    line-height: 1.4;\n  "], ["\n    margin: ", " 0 0 0;\n    font-size: ", ";\n    color: ", ";\n    line-height: 1.4;\n  "])), theme.size.pxToRem(theme.size.space.XXS), theme.size.pxToRem(theme.size.font.TALL), theme.palette.DANGER);
 });
-var TagWrapper = styled.span(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
+var StatusLabelWrapper = styled.span(templateObject_11 || (templateObject_11 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
     "\n"])), function (_a) {
     var theme = _a.theme;
     return css(templateObject_10 || (templateObject_10 = __makeTemplateObject(["\n    margin-left: ", ";\n  "], ["\n    margin-left: ", ";\n  "])), theme.size.pxToRem(theme.size.space.XXS));

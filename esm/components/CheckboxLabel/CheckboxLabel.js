@@ -27,15 +27,15 @@ var __rest = (this && this.__rest) || function (s, e) {
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { withTheme } from '../../hocs/withTheme';
-import { Checkbox } from '../Checkbox';
-var CheckboxLabelComponent = function (_a) {
+import { CheckBox } from '../CheckBox';
+var CheckBoxLabelComponent = function (_a) {
     var label = _a.label, theme = _a.theme, _b = _a.className, className = _b === void 0 ? '' : _b, props = __rest(_a, ["label", "theme", "className"]);
     return (React.createElement(Wrapper, { className: className },
         React.createElement(Label, { className: "" + (props.disabled ? 'disabled' : '') },
-            React.createElement(Checkbox, __assign({}, props)),
+            React.createElement(CheckBox, __assign({}, props)),
             React.createElement(Txt, { theme: theme }, label))));
 };
-export var CheckboxLabel = withTheme(CheckboxLabelComponent);
+export var CheckBoxLabel = withTheme(CheckBoxLabelComponent);
 var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: inline-block;\n"], ["\n  display: inline-block;\n"])));
 var Label = styled.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n\n  &.disabled {\n    cursor: default;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n\n  &.disabled {\n    cursor: default;\n  }\n"])));
 var Txt = styled.p(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  ", "\n"], ["\n  ",
@@ -44,4 +44,4 @@ var Txt = styled.p(templateObject_4 || (templateObject_4 = __makeTemplateObject(
     return css(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n    margin: 0 0 0 ", ";\n    font-size: ", ";\n    color: ", ";\n  "], ["\n    margin: 0 0 0 ", ";\n    font-size: ", ";\n    color: ", ";\n  "])), theme.size.pxToRem(theme.size.space.XXS), theme.size.pxToRem(theme.size.font.TALL), theme.palette.TEXT_BLACK);
 });
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4;
-//# sourceMappingURL=CheckboxLabel.js.map
+//# sourceMappingURL=CheckBoxLabel.js.map
